@@ -1,9 +1,13 @@
-/*
-/// Module: sui_move_intro
-module sui_move_intro::sui_move_intro;
-*/
+use std::string;
+use sui::object::{Self, UID};
+use sui::transfer;
+use sui::tx_context::{Self, TxContext};
 
-// For Move coding conventions, see
-// https://docs.sui.io/concepts/sui-move-concepts/conventions
+module sui_move_intro::hello_world {
+    
+}
 
-
+public struct HelloWorldObject has key, store {
+    id: UID,
+    text: string::String,
+}
